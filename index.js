@@ -9,6 +9,11 @@ const PORT = process.env.PORT || 3000
 
 const db = new pg.Pool({ connectionString: process.env.DATABASE_URL })
 
+app.get("/votes", async (_request, response) =>{
+  const result = await db.query(`SELECT * FROM votes WHERE date = CURRENT_DATE`)
+  response.json(result.rows)
+})
+
 db.query(`
   CREATE TABLE IF NOT EXISTS votes( 
     id SERIAL PRIMARY KEY,
@@ -22,4 +27,3 @@ db.query(`
 app.listen(PORT, () =>
   console.log(`Server is up and running at port ${PORT} 🚀`)
 );
-
