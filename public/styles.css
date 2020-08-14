@@ -24,6 +24,7 @@ header{
   font-family: "sofia_pro";
   color: white;
   text-align: center;
+  z-index: 2;
 }
 
 main{
