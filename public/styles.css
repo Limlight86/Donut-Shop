@@ -35,18 +35,19 @@ main{
   font-family: "sofia_pro";
 }
 
-.donut img{
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-}
-
 .donut{
   background-color: white;
   display: grid;
   place-items: center;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.donut img{
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
 .donut button{
@@ -59,5 +60,14 @@ main{
   font-size: 1.25rem;
   padding: 1rem 2rem;
   margin: 1rem 0;
-  cursor: pointer;;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donut img:hover{
+  transform: scale(1.05);
+}
+
+.donut button:hover{
+  background-color: #AC0D26;
 }
