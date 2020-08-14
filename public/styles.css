@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "sofia_pro";
+  src: url("sofia_pro_regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
