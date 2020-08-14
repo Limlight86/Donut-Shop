@@ -1,0 +1,12 @@
+{
+  "name": "donut_of_the_day",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Limlight86/Donut-Shop.git",
+  "author": "Lazaro <lquin008@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.3.0"
+  }
+}
