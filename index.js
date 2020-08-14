@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000
 const db = new pg.Pool({ connectionString: process.env.DATABASE_URL })
 
 app.get("/votes", async (_request, response) =>{
-  const result = await db.query(`SELECT * FROM votes WHERE date = CURRENT_DATE`)
+  const result = await db.query(`SELECT donut, COUNT (donut) FROM votes GROUP BY donut;`)
   response.json(result.rows)
 })
 
