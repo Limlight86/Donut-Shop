@@ -15,6 +15,8 @@ db.query(`
     donut VARCHAR(128) NOT NULL,
     voter VARCHAR(128) NOT NULL, 
     date DATE DEFAULT CURRENT_DATE);
+  
+    CREATE UNIQUE INDEX IF NOT EXISTS daily_vote ON votes (voter, date)
 `)
 
 app.listen(PORT, () =>
